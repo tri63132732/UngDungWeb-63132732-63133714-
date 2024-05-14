@@ -1,0 +1,110 @@
+﻿  <!-- Sidebar -->
+<div class="sidebar">
+    <!-- Sidebar user (optional) -->
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+            <img src="~/Content/clients/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+            @if (User.Identity.IsAuthenticated)
+            {
+                <a href="/Admin/HomeAdmin" class="d-block">@User.Identity.Name</a>
+            }
+            else
+            {
+                <a href="/Admin/HomeAdmin" class="d-block">Guest</a> <!-- or any other default value if the user is not authenticated -->
+            }
+        </div>
+    </div>
+    <nav class="mt-2">
+        @using Microsoft.AspNet.Identity
+        @if (Request.IsAuthenticated)
+        {
+            using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <ul class="navbar-nav navbar-right">
+
+                    <li><a class="nav-link" href="javascript:document.getElementById('logoutForm').submit()">Đăng xuất</a></li>
+                </ul>
+            }
+        }
+        else
+        {
+            <ul class="navbar-nav navbar-right">
+                <li>@Html.ActionLink("Đăng nhập", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "nav-link" })</li>
+            </ul>
+        }
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+        with font-awesome or any other icon font library -->
+
+            <li class="nav-item">
+                <a href="/admin/role" class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                        Quyền
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="/admin/comments" class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                        Bình luận
+                        @*<span class="right badge badge-danger">New</span>*@
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                    <p>
+                        Quản lý truyện
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="/admin/genres" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Danh mục truyện</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/novels" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Truyện</p>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="/admin/accountadmin" class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                        Tài khoản
+                        @*<span class="right badge badge-danger">New</span>*@
+                    </p>
+                </a>
+            </li>
+
+
+        </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+</div>
+<!-- /.sidebar -->
+
+@if (Request.IsAuthenticated)
+{
+    <div style="display:none">
+        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { @id = "logOffForm" }))
+        {
+            @Html.AntiForgeryToken()}
+    </div>}

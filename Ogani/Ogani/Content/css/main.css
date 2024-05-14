@@ -1,0 +1,58 @@
+.chapter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+}
+.chapter-info {
+    display: flex;
+    flex-direction: column;
+}
+.chapter-actions {
+    display: flex;
+    align-items: center;
+}
+.chapter-actions img {
+    margin-left: 10px;
+}
+
+.scrollable-list {
+    max-height: 500px; /* Điều chỉnh chiều cao tối đa theo nhu cầu của bạn */
+    overflow-y: auto;
+}
+.list-group-item{
+    border-left: #9fcdff 5px solid;
+}
+.list-group-item:hover {
+    border-left: #3CC032 5px solid;
+    background-color: #f8f9fa; /* Màu nền khi di chuột qua */
+    cursor: pointer; /* Biến đổi con trỏ thành hình bàn tay khi di chuột qua */
+}
+.dropdown-item:hover{
+    border-left: #3CC032 5px solid;
+    background-color: #f8f9fa; /* Màu nền khi di chuột qua */
+    cursor: pointer; /* Biến đổi con trỏ thành hình bàn tay khi di chuột qua */
+}
+
+.description{
+    padding: 10px;
+}
+.sidebar__item__size label:hover {
+    cursor: pointer;
+    background-color: #6c757d;
+    color: #9fcdff;
+}
+
+.text-green {
+    color: #3CC032;
+}
+.btn-success {
+    background-color: #6AB963;
+    border-radius: 0;
+    color: white;
+}
+
+.read-manga img{
+    width: 100%;
+    height: auto;
+}

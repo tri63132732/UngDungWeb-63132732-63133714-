@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ogani Template">
+    <meta name="keywords" content="Ogani, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ogani | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-s9x3osv4htf3nGbIw9C2uJYM9JcdgpIbDLOrTu68vCc4fqN93Kg0DlLO9hL0afR/" crossorigin="anonymous">
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="~/Content/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="~/Content/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/Content/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="~/Content/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="~/Content/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="~/Content/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="~/Content/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="~/Content/css/style.css" type="text/css">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <!-- Navbar trên màn hình PC -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="@Url.Action("Index", "Home", new { area = "" })" class="nav-link">
+                            <img src="img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <nav class="header__menu">
+                        <ul>
+                            <li>@Html.ActionLink("Trang chủ", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li><a href="#">Danh sách</a></li>
+                            <li>
+                                <a href="#"> Hướng dẫn</a>
+                                <ul class="header__menu__dropdown">
+                                    <li>@Html.ActionLink("Đăng truyện", "DangTruyen", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                                    <li>@Html.ActionLink("Giới thiệu", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                                    <li>@Html.ActionLink("Privacy policy", "PrivacyPolicy", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+
+                                </ul>
+                            </li>
+                            <li>@Html.ActionLink("Tìm kiếm", "PrivacyPolicy", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col-lg-2">
+                    <div class="header__cart">
+
+                        @Html.Partial("_LoginPartial")
+                    </div>
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="novelModelStoreContainer" CdmEntityContainer="novelEntities">
+    <EntitySetMapping Name="comments">
+      <EntityTypeMapping TypeName="novelModel.comment">
+        <MappingFragment StoreEntitySet="comments">
+          <ScalarProperty Name="comment_id" ColumnName="comment_id" />
+          <ScalarProperty Name="novel_id" ColumnName="novel_id" />
+          <ScalarProperty Name="chapter_id" ColumnName="chapter_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chapters">
+      <EntityTypeMapping TypeName="novelModel.chapter">
+        <MappingFragment StoreEntitySet="chapters">
+          <ScalarProperty Name="chapter_id" ColumnName="chapter_id" />
+          <ScalarProperty Name="novel_id" ColumnName="novel_id" />
+          <ScalarProperty Name="chapter_number" ColumnName="chapter_number" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="is_available" ColumnName="is_available" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="genres">
+      <EntityTypeMapping TypeName="novelModel.genre">
+        <MappingFragment StoreEntitySet="genres">
+          <ScalarProperty Name="genre_id" ColumnName="genre_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="novels">
+      <EntityTypeMapping TypeName="novelModel.novel">
+        <MappingFragment StoreEntitySet="novels">
+          <ScalarProperty Name="novel_id" ColumnName="novel_id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="cover_image_url" ColumnName="cover_image_url" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="novelModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_read_novels">
+      <EntityTypeMapping TypeName="novelModel.user_read_novels">
+        <MappingFragment StoreEntitySet="user_read_novels">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="novel_id" ColumnName="novel_id" />
+          <ScalarProperty Name="last_read_chapter_id" ColumnName="last_read_chapter_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="novelModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password_hash" ColumnName="password_hash" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="novel_genres" TypeName="novelModel.novel_genres" StoreEntitySet="novel_genres">
+      <EndProperty Name="genres">
+        <ScalarProperty Name="genre_id" ColumnName="genre_id" />
+      </EndProperty>
+      <EndProperty Name="novels">
+        <ScalarProperty Name="novel_id" ColumnName="novel_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="novelModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="novelModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="novelModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="novelModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="novelModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="novelModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="novelModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="novelModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="novelModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

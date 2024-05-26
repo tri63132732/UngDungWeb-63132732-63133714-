@@ -1,0 +1,57 @@
+﻿@model PagedList.PagedList<DocTruyen.Models.EF.Story>
+@using PagedList.Mvc
+@using System.Text.RegularExpressions
+<style>
+    .parent-centered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .centered {
+        text-align: center;
+    }
+</style>
+
+
+@foreach (var item in Model)
+{
+    <div class="parent-centered">
+        <div class="centered">
+            <table border="1" cellpadding="2" cellspacing="10" width="1000px">
+                <tr>
+                    <td width="200px"> <img src="@item.image" width="200" /></td>
+                    <td rowspan="6" style="text-align: justify;">
+                        <p><a href="/Stories/Details/@item.Id">@item.Name</a></p>
+                        <p>
+                            @{
+                                var content = @item.Content;
+                                var maxLength = 700; // Set your character limit
+
+                                // Decode HTML entities
+                                content = HttpUtility.HtmlDecode(content);
+
+                                // Remove HTML tags
+                                content = Regex.Replace(content, "<.*?>", String.Empty);
+
+                                // Truncate content if it exceeds maxLength
+                                if (content.Length > maxLength) content = content.Substring(0, maxLength) + "...";
+
+                            }
+                            @content
+                        </p>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+}
+<div class="row">
+    <div class="col-6"></div>
+    <div class="col-6" style="text-align:right;">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+    </div>
+</div>
+
+

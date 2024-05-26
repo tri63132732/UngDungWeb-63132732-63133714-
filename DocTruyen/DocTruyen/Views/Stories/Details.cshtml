@@ -1,0 +1,110 @@
+﻿@model DocTruyen.Models.EF.Story
+@using System.Text.RegularExpressions
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang thông tin truyện</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+        }
+
+        .card-header {
+            background-color: #e9ecef;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+                border-color: #004085;
+            }
+
+        .info-section {
+            margin-top: 20px;
+        }
+
+        .stats-section {
+            margin-top: 20px;
+        }
+
+            .stats-section .card {
+                background-color: #e9ecef;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="info-section row">
+            <div class="col-md-4">
+                <img src="@Model.image" class="img-fluid" alt="Bìa truyện">
+            </div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">@Model.Name</h3>
+                        <p class="card-text">
+                            @foreach (var category in ViewBag.Categories)
+                            {
+                                <span class="badge badge-pill badge-primary">@category.Name</span>
+                            }
+
+                        </p>
+                        <p class="card-text">
+                        <p>Tác giả: @ViewBag.Author.Name</p>
+
+                        <p class="card-text"><strong>Tình trạng:</strong> Tạm ngưng</p>
+                        <h5>Tên khác:</h5>
+                        <dd>
+                            @Html.DisplayFor(model => model.Alias)
+                        </dd>
+                        <h5>Link:</h5>
+                        <dd>
+                            @Html.DisplayFor(model => model.source)
+                        </dd>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="other-info-section row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+
+                        <h5>Tóm Tắt:</h5>
+                        <dd>
+                            @ViewBag.Content
+                        </dd>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h4>Mục lục</h4>
+        <ul>
+            @foreach (var chapter in ViewBag.Chapters)
+            {
+                <li><a href="/Chapters/Details/@chapter.Id">@chapter.Name</a></li>
+                <!-- Display other chapter details as needed -->
+            }
+        </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>

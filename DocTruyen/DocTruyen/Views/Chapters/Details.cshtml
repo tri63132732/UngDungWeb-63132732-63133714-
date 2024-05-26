@@ -1,0 +1,38 @@
+﻿@model DocTruyen.Models.EF.Chapter
+@using System.Text.RegularExpressions
+<style>
+    .parent-centered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .centered {
+        text-align: center;
+    }
+</style>
+
+<div class="parent-centered">
+    <div class="centered">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+</div>
+@{
+    var content = @Model.Content; // Assuming Model is your Story object
+
+
+    // Decode HTML entities
+    content = HttpUtility.HtmlDecode(content);
+
+    // Remove HTML tags
+    content = Regex.Replace(content, "<.*?>", String.Empty);
+
+    content = content.Replace("<br>", "\n");
+}
+<div class="row">
+    <div class="col-md-12">
+        <div>
+             @content
+        </div>
+    </div>
+</div>

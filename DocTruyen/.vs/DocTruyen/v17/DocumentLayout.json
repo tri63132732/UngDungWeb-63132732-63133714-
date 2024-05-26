@@ -1,18 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\DocTruyen\\",
+  "WorkspaceRootPath": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|d:\\doctruyen\\doctruyen\\controllers\\storiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|solutionrelative:doctruyen\\controllers\\storiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|d:\\ungdungweb-63132732-63133714-\\doctruyen\\doctruyen\\views\\chapters\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|solutionrelative:doctruyen\\views\\chapters\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|d:\\doctruyen\\doctruyen\\views\\stories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\doctruyen\\views\\stories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|solutionrelative:doctruyen\\views\\stories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|d:\\doctruyen\\doctruyen\\views\\stories\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\doctruyen\\views\\stories\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|solutionrelative:doctruyen\\views\\stories\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|d:\\ungdungweb-63132732-63133714-\\doctruyen\\doctruyen\\controllers\\chapterscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|solutionrelative:doctruyen\\controllers\\chapterscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|d:\\ungdungweb-63132732-63133714-\\doctruyen\\doctruyen\\models\\ef\\story.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|solutionrelative:doctruyen\\models\\ef\\story.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|d:\\ungdungweb-63132732-63133714-\\doctruyen\\doctruyen\\controllers\\storiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|solutionrelative:doctruyen\\controllers\\storiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,13 +38,52 @@
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Story.cs",
+              "DocumentMoniker": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Models\\EF\\Story.cs",
+              "RelativeDocumentMoniker": "DocTruyen\\Models\\EF\\Story.cs",
+              "ToolTip": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Models\\EF\\Story.cs",
+              "RelativeToolTip": "DocTruyen\\Models\\EF\\Story.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAqwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T18:33:06.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChaptersController.cs",
+              "DocumentMoniker": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Controllers\\ChaptersController.cs",
+              "RelativeDocumentMoniker": "DocTruyen\\Controllers\\ChaptersController.cs",
+              "ToolTip": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Controllers\\ChaptersController.cs",
+              "RelativeToolTip": "DocTruyen\\Controllers\\ChaptersController.cs",
+              "ViewState": "AQIAAKgAAAAAAAAAAAA5wKwAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T18:03:15.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Views\\Chapters\\Details.cshtml",
+              "RelativeDocumentMoniker": "DocTruyen\\Views\\Chapters\\Details.cshtml",
+              "ToolTip": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Views\\Chapters\\Details.cshtml",
+              "RelativeToolTip": "DocTruyen\\Views\\Chapters\\Details.cshtml",
+              "ViewState": "AQIAADoAAAAAAAAAAAAswFAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-26T17:49:15.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\DocTruyen\\DocTruyen\\Views\\Stories\\Details.cshtml",
+              "DocumentMoniker": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Views\\Stories\\Details.cshtml",
               "RelativeDocumentMoniker": "DocTruyen\\Views\\Stories\\Details.cshtml",
-              "ToolTip": "D:\\DocTruyen\\DocTruyen\\Views\\Stories\\Details.cshtml",
+              "ToolTip": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Views\\Stories\\Details.cshtml",
               "RelativeToolTip": "DocTruyen\\Views\\Stories\\Details.cshtml",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAAAFkAAAAsAAAA",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAwwHUAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-26T11:11:31.338Z",
               "EditorCaption": ""
@@ -41,24 +92,24 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\DocTruyen\\DocTruyen\\Views\\Stories\\Index.cshtml",
+              "DocumentMoniker": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Views\\Stories\\Index.cshtml",
               "RelativeDocumentMoniker": "DocTruyen\\Views\\Stories\\Index.cshtml",
-              "ToolTip": "D:\\DocTruyen\\DocTruyen\\Views\\Stories\\Index.cshtml",
+              "ToolTip": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Views\\Stories\\Index.cshtml",
               "RelativeToolTip": "DocTruyen\\Views\\Stories\\Index.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "ViewState": "AQIAADUAAAAAAAAAAAAUwDwAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-26T08:36:36.369Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "StoriesController.cs",
-              "DocumentMoniker": "D:\\DocTruyen\\DocTruyen\\Controllers\\StoriesController.cs",
+              "DocumentMoniker": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Controllers\\StoriesController.cs",
               "RelativeDocumentMoniker": "DocTruyen\\Controllers\\StoriesController.cs",
-              "ToolTip": "D:\\DocTruyen\\DocTruyen\\Controllers\\StoriesController.cs",
+              "ToolTip": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Controllers\\StoriesController.cs",
               "RelativeToolTip": "DocTruyen\\Controllers\\StoriesController.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAhwBYAAAAMAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAswBgAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-26T08:36:30.599Z",
               "EditorCaption": ""

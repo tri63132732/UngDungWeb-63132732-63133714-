@@ -61,18 +61,10 @@
 
                         </p>
                         <p class="card-text">
-                        <p>Tác giả: @ViewBag.Author.Name</p>
-
+                        <p class="card-text"><strong>Tác giả:</strong> @ViewBag.Author.Name</p>
                         <p class="card-text"><strong>Tình trạng:</strong> Tạm ngưng</p>
-                        <h5>Tên khác:</h5>
-                        <dd>
-                            @Html.DisplayFor(model => model.Alias)
-                        </dd>
-                        <h5>Link:</h5>
-                        <dd>
-                            @Html.DisplayFor(model => model.source)
-                        </dd>
-
+                        <p class="card-text"><strong>Tên khác:</strong> @Html.DisplayFor(model => model.Alias)</p>
+                        <p class="card-text"><strong>Nguồn:</strong> @Html.DisplayFor(model => model.source)</p>
                     </div>
                 </div>
             </div>
@@ -87,7 +79,7 @@
 
                         <h5>Tóm Tắt:</h5>
                         <dd>
-                            @ViewBag.Content
+                            <pre style="white-space: pre-wrap;">@ViewBag.Content</pre>
                         </dd>
                     </div>
                 </div>
@@ -104,6 +96,26 @@
             }
         </ul>
     </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer__copyright">
+                        <div class="footer__copyright__text">
+                            <p>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script>
+                                All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="#" target="_blank">Ogani</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                        <div class="footer__copyright__payment"><img src="~/Images/payment-item.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

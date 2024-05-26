@@ -71,20 +71,11 @@ namespace DocTruyen.Controllers
             // Pass the chapters along with the story to the view
             ViewBag.Chapters = chapters;
 
-            // Decode HTML entities
             var content = HttpUtility.HtmlDecode(story.Content);
 
-            // Remove HTML tags
-            content = Regex.Replace(content, "<.*?>", String.Empty);
-
-            // Replace HTML line breaks with newline characters
-            content = content.Replace("<br>", "\n");
-
-            // Add spaces after punctuation marks to preserve line breaks
-            content = content.Replace(".", ". ");
-            content = content.Replace("?", "? ");
-            content = content.Replace("!", "! ");
-            // Add more punctuation marks as needed
+            // Remove HTML tags but keep line breaks
+            content = Regex.Replace(content, "<br\\s*/?>", "\n"); // Replace <br> with newline
+            content = Regex.Replace(content, "<.*?>", String.Empty); // Remove other HTML tags
 
             // Pass the processed content along with the story to the view
             ViewBag.Content = content;

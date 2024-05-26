@@ -4,6 +4,8 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using DocTruyen.Models;
@@ -34,6 +36,14 @@ namespace DocTruyen.Controllers
             {
                 return HttpNotFound();
             }
+            var content = HttpUtility.HtmlDecode(chapter.Content);
+
+            // Remove HTML tags but keep line breaks
+            content = Regex.Replace(content, "<br\\s*/?>", "\n"); // Replace <br> with newline
+            content = Regex.Replace(content, "<.*?>", String.Empty); // Remove other HTML tags
+
+            // Pass the processed content along with the story to the view
+            ViewBag.Content = content;
             return View(chapter);
         }
 
@@ -129,5 +139,74 @@ namespace DocTruyen.Controllers
             }
             base.Dispose(disposing);
         }
+
+
+
+        public async Task<ActionResult> GetNextChapter(int currentChapterId)
+        {
+            var currentChapter = await db.Chapters.FindAsync(currentChapterId);
+            if (currentChapter == null)
+            {
+                return HttpNotFound();
+            }
+
+            var storyId = currentChapter.StoryId;
+            var story = await db.Stories
+                .Include(s => s.Chapters)
+                .FirstOrDefaultAsync(s => s.Id == storyId);
+
+            var nextChapter = story.GetNextChapter(currentChapterId);
+            if (nextChapter == null)
+            {
+                return HttpNotFound();
+            }
+
+            // Truyền ID của chapter tiếp theo trực tiếp vào action Details trong URL
+            var nextChapterId = nextChapter.Id;
+            return RedirectToAction("Details", "Chapters", new { id = nextChapterId });
+        }
+
+        public async Task<int> GetTotalNumberOfChapters(int storyId)
+        {
+            var totalNumberOfChapters = await db.Chapters
+                .Where(c => c.StoryId == storyId)
+                .CountAsync();
+
+            return totalNumberOfChapters;
+        }
+
+        public async Task<ActionResult> GetPreviousChapter(int currentChapterId)
+        {
+            var currentChapter = await db.Chapters.FindAsync(currentChapterId);
+            if (currentChapter == null)
+            {
+                return HttpNotFound();
+            }
+
+            var storyId = currentChapter.StoryId;
+
+            // Tính tổng số lượng chapter của câu chuyện
+            var totalNumberOfChapters = await GetTotalNumberOfChapters(storyId);
+
+            var story = await db.Stories
+                .Include(s => s.Chapters)
+                .FirstOrDefaultAsync(s => s.Id == storyId);
+
+            var previousChapter = story.GetPreviousChapter(currentChapterId);
+            if (previousChapter == null)
+            {
+                return HttpNotFound();
+            }
+
+            // Truyền ID của chapter trước đó trực tiếp vào action Details trong URL
+            var previousChapterId = previousChapter.Id;
+
+            // Truyền giá trị TotalNumberOfChapters qua ViewBag
+            ViewBag.TotalNumberOfChapters = totalNumberOfChapters;
+
+            return RedirectToAction("Details", "Chapters", new { id = previousChapterId });
+        }
+
+
     }
 }

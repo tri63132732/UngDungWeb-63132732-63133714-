@@ -26,5 +26,9 @@ namespace DocTruyen.Controllers
 
             return View();
         }
+        public ActionResult PrivacyPolicy()
+        {
+            return View();
+        }
     }
 }

@@ -34,6 +34,39 @@ namespace DocTruyen.Models.EF
         public virtual ICollection<Viewed> Vieweds { get; set; }
         public virtual ICollection<StoryAuthor> StoryAuthors { get; set; }
         public virtual ICollection<StoryCategory> StoryCategories { get; set; }
+
+        // Các phương thức và thuộc tính để làm việc với Chapters
+        public Chapter GetNextChapter(int currentChapterId)
+        {
+            var sortedChapters = Chapters.OrderBy(c => c.Id).ToList();
+            var currentIndex = sortedChapters.FindIndex(c => c.Id == currentChapterId);
+
+            if (currentIndex < sortedChapters.Count - 1 && currentIndex >= 0)
+            {
+                return sortedChapters[currentIndex + 1];
+            }
+            else
+            {
+                // Trả về null hoặc xử lý nếu không có chapter tiếp theo
+                return null;
+            }
+        }
+
+        public Chapter GetPreviousChapter(int currentChapterId)
+        {
+            var sortedChapters = Chapters.OrderBy(c => c.Id).ToList();
+            var currentIndex = sortedChapters.FindIndex(c => c.Id == currentChapterId);
+
+            if (currentIndex > 0 && currentIndex <= sortedChapters.Count)
+            {
+                return sortedChapters[currentIndex - 1];
+            }
+            else
+            {
+                // Trả về null hoặc xử lý nếu không có chapter trước đó
+                return null;
+            }
+        }
     }
 
 }

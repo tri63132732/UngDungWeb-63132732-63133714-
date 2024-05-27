@@ -230,3 +230,4 @@ D:\DocTruyen\DocTruyen\obj\Debug\DocTruyen.csproj.CoreCompileInputs.cache
 D:\DocTruyen\DocTruyen\obj\Debug\DocTruyen.csproj.Up2Date
 D:\DocTruyen\DocTruyen\obj\Debug\DocTruyen.dll
 D:\DocTruyen\DocTruyen\obj\Debug\DocTruyen.pdb
+D:\UngDungWeb-63132732-63133714-\DocTruyen\DocTruyen\obj\Debug\DocTruyen.Migrations.updatedatabase.resources

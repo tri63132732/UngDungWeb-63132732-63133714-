@@ -188,6 +188,7 @@
     <Compile Include="Areas\Admin\Controllers\StoryAuthorController.cs" />
     <Compile Include="Areas\Admin\Controllers\StoryCategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\StoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ViewedsController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ChaptersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -199,6 +200,10 @@
     <Compile Include="Migrations\202405230905229_DatabaseCreate.cs" />
     <Compile Include="Migrations\202405230905229_DatabaseCreate.Designer.cs">
       <DependentUpon>202405230905229_DatabaseCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405270457361_updatedatabase.cs" />
+    <Compile Include="Migrations\202405270457361_updatedatabase.Designer.cs">
+      <DependentUpon>202405270457361_updatedatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -3336,6 +3341,11 @@
     <Content Include="Content\sass\_shoping-cart.scss" />
     <Content Include="Content\sass\_sidebar.scss" />
     <Content Include="Content\sass\_variable.scss" />
+    <Content Include="Areas\Admin\Views\Vieweds\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Vieweds\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Vieweds\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Vieweds\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Vieweds\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -3428,6 +3438,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202405230905229_DatabaseCreate.resx">
       <DependentUpon>202405230905229_DatabaseCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405270457361_updatedatabase.resx">
+      <DependentUpon>202405270457361_updatedatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

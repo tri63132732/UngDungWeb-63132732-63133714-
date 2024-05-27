@@ -8,10 +8,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using DocTruyen.ViewModels;
+using PagedList;
 
 namespace DocTruyen.Areas.Admin.Controllers
 {
-
+    [Authorize(Roles = "Admin")]
     public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;
@@ -20,10 +22,30 @@ namespace DocTruyen.Areas.Admin.Controllers
         public AccountController()
         {
         }
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
-            var ítems = db.Users.ToList();
-            return View(ítems);
+            var users = db.Users.ToList();
+
+            var usersWithRoles = new List<UserWithRolesViewModel>();
+
+            foreach (var user in users)
+            {
+                var roles = UserManager.GetRolesAsync(user.Id).Result;
+                var roleName = roles.FirstOrDefault(); // Lấy vai trò đầu tiên (nếu có)
+
+                usersWithRoles.Add(new UserWithRolesViewModel
+                {
+                    UserId = user.Id,
+                    Email = user.Email,
+                    Role = roleName != null ? roleName : "No Role" // Kiểm tra nếu không có vai trò
+                });
+            }
+
+            int pageSize = 10;
+            int pageNumber = (page ?? 1);
+            var pagedUsers = usersWithRoles.ToPagedList(pageNumber, pageSize);
+
+            return View(pagedUsers);
         }
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
         {

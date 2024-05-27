@@ -1,8 +1,36 @@
-﻿@{
+﻿@model IEnumerable<DocTruyen.ViewModels.StoryViewModel>
+@{
     ViewBag.Title = "Home Page";
 }
 <link rel="stylesheet" href="~/Content/css/bootstrap.min.css" type="text/css">
+<style>
+    .container1 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+    }
 
+    .card1 {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+    }
+
+        .card1 img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card1 h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .card1 p {
+            margin-bottom: 10px;
+        }
+</style>
 <body>
     <!-- Tìm kiếm Begin -->
     <div class="d-flex justify-content-center">
@@ -42,6 +70,32 @@
         </div>
     </div>
     <!-- Banner End -->
+
+    <div class="container1">
+        @foreach (var story in Model)
+        {
+            <div class="card1">
+                <img src="@story.Image" width="200" />
+
+                <p><a href="/stories/details/@story.Id">@story.Name</a></p>
+                <ul style="list-style-type: none; padding: 0; margin: 0; ">
+                    @if (story.Chapters != null && story.Chapters.Any())
+                    {
+                        foreach (var chapter in story.Chapters)
+                        {
+                            <li style="margin-bottom: 5px;"><a href="/Chapters/Details/@chapter.Id">@chapter.Name</a></li>
+                            <!-- Display other chapter details as needed -->
+                        }
+                    }
+                </ul>
+            </div>
+        }
+    </div>
+    <br /><br />
+    <div style="text-align:center">
+        <p class="btn btn-primary"><a href="/stories/index" style="color: white; text-decoration: none;">Xem thêm>></a></p>
+    </div>
+
     <!-- Danh sách nổi bật trang chủ -->
     <section class="latest-product spad">
         <div class="container">
@@ -252,7 +306,6 @@
     </section>
     <!-- Kết thúc danh sách nổi bật trang chủ -->
     <!-- Footer Section Begin -->
-
     <!-- Footer Section End -->
     <!-- Js Plugins -->
     <script src="~/Content/js/jquery-3.3.1.min.js"></script>
@@ -263,6 +316,4 @@
     <script src="~/Content/js/mixitup.min.js"></script>
     <script src="~/Content/js/owl.carousel.min.js"></script>
     <script src="~/Content/js/main.js"></script>
-
-
 </body>

@@ -12,7 +12,7 @@ using PagedList;
 
 namespace DocTruyen.Areas.Admin.Controllers
 {
-
+    [Authorize(Roles = "Admin, User")]
     public class ChapterController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

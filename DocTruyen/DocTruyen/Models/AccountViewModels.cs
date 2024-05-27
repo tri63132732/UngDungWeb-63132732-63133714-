@@ -84,6 +84,7 @@ namespace DocTruyen.Models
 
     public class RegisterViewModel
     {
+        public string Role { get; set; }
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]

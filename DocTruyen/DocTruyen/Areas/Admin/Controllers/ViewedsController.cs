@@ -12,6 +12,7 @@ using PagedList;
 
 namespace DocTruyen.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class ViewedsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

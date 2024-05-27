@@ -1,54 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|d:\\ungdungweb-63132732-63133714-\\doctruyen\\doctruyen\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|solutionrelative:doctruyen\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\doctruyen\\views\\chapters\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|solutionrelative:doctruyen\\views\\chapters\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Views\\Chapters\\Details.cshtml",
-              "RelativeDocumentMoniker": "DocTruyen\\Views\\Chapters\\Details.cshtml",
-              "ToolTip": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Views\\Chapters\\Details.cshtml",
-              "RelativeToolTip": "DocTruyen\\Views\\Chapters\\Details.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAADUAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-27T05:33:59.96Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "DocTruyen\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "DocTruyen\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAAAF8AAABoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-27T10:01:12.782Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

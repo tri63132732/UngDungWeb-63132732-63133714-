@@ -67,6 +67,15 @@ namespace DocTruyen.Areas.Admin.Controllers
                 chapter.CreateDate = DateTime.Now;
                 chapter.UpdateDate = DateTime.Now;
                 db.Chapters.Add(chapter);
+
+                // Tìm truyện tương ứng và cập nhật thông tin
+                var story = db.Stories.Find(chapter.StoryId);
+                if (story != null)
+                {
+                    story.UpdateDate = DateTime.Now; // Cập nhật ngày sửa đổi hoặc thông tin khác
+                    db.Entry(story).State = EntityState.Modified;
+                }
+
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

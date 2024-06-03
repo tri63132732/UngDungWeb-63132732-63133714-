@@ -44,6 +44,10 @@ namespace DocTruyen.Controllers
 
             // Pass the processed content along with the story to the view
             ViewBag.Content = content;
+
+            var vieweds = db.Vieweds.Include(v => v.Story).Include(v => v.User)
+                            .Where(v => v.StoryId == chapter.StoryId).ToList();
+            ViewBag.Vieweds = vieweds;
             return View(chapter);
         }
 

@@ -188,7 +188,7 @@
     <Compile Include="Areas\Admin\Controllers\StoryAuthorController.cs" />
     <Compile Include="Areas\Admin\Controllers\StoryCategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\StoryController.cs" />
-    <Compile Include="Areas\Admin\Controllers\ViewedsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ViewedController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ChaptersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -205,6 +205,10 @@
     <Compile Include="Migrations\202405270457361_updatedatabase.Designer.cs">
       <DependentUpon>202405270457361_updatedatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202406022010144_update.cs" />
+    <Compile Include="Migrations\202406022010144_update.Designer.cs">
+      <DependentUpon>202406022010144_update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Common.cs" />
@@ -219,6 +223,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\ChapterDetailsViewModel.cs" />
     <Compile Include="ViewModels\ChapterViewModel.cs" />
     <Compile Include="ViewModels\StoryViewModel.cs" />
     <Compile Include="ViewModels\UserWithRolesViewModel.cs" />
@@ -3054,30 +3059,12 @@
     <Content Include="Content\Site.css" />
     <Content Include="Images\banner\banner-1.png" />
     <Content Include="Images\banner\banner-2.png" />
-    <Content Include="Images\breadcrumb.jpg" />
-    <Content Include="Images\cart\cart-1.jpg" />
-    <Content Include="Images\cart\cart-2.jpg" />
-    <Content Include="Images\cart\cart-3.jpg" />
-    <Content Include="Images\categories\cat-1.jpg" />
-    <Content Include="Images\categories\cat-2.jpg" />
-    <Content Include="Images\categories\cat-3.jpg" />
-    <Content Include="Images\categories\cat-4.jpg" />
-    <Content Include="Images\categories\cat-5.jpg" />
     <Content Include="Images\delete.png" />
     <Content Include="Images\details.png" />
     <Content Include="Images\DHNT.png" />
     <Content Include="Images\edit.png" />
     <Content Include="Images\employee.png" />
     <Content Include="Images\employee1.png" />
-    <Content Include="Images\featured\feature-1.jpg" />
-    <Content Include="Images\featured\feature-2.jpg" />
-    <Content Include="Images\featured\feature-3.jpg" />
-    <Content Include="Images\featured\feature-4.jpg" />
-    <Content Include="Images\featured\feature-5.jpg" />
-    <Content Include="Images\featured\feature-6.jpg" />
-    <Content Include="Images\featured\feature-7.jpg" />
-    <Content Include="Images\featured\feature-8.jpg" />
-    <Content Include="Images\hero\banner.jpg" />
     <Content Include="Images\language.png" />
     <Content Include="Images\latest-product\lp-1.jpg" />
     <Content Include="Images\latest-product\lp-1.png" />
@@ -3085,89 +3072,7 @@
     <Content Include="Images\latest-product\lp-2.png" />
     <Content Include="Images\latest-product\lp-3.jpg" />
     <Content Include="Images\latest-product\lp-3.png" />
-    <Content Include="Images\logo.png" />
     <Content Include="Images\payment-item.png" />
-    <Content Include="Images\product\details\product-details-1.jpg" />
-    <Content Include="Images\product\details\product-details-2.jpg" />
-    <Content Include="Images\product\details\product-details-3.jpg" />
-    <Content Include="Images\product\details\product-details-4.jpg" />
-    <Content Include="Images\product\details\product-details-5.jpg" />
-    <Content Include="Images\product\details\thumb-1.jpg" />
-    <Content Include="Images\product\details\thumb-2.jpg" />
-    <Content Include="Images\product\details\thumb-3.jpg" />
-    <Content Include="Images\product\details\thumb-4.jpg" />
-    <Content Include="Images\product\discount\pd-1.jpg" />
-    <Content Include="Images\product\discount\pd-2.jpg" />
-    <Content Include="Images\product\discount\pd-3.jpg" />
-    <Content Include="Images\product\discount\pd-4.jpg" />
-    <Content Include="Images\product\discount\pd-5.jpg" />
-    <Content Include="Images\product\discount\pd-6.jpg" />
-    <Content Include="Images\product\product-1.jpg" />
-    <Content Include="Images\product\product-10.jpg" />
-    <Content Include="Images\product\product-11.jpg" />
-    <Content Include="Images\product\product-12.jpg" />
-    <Content Include="Images\product\product-2.jpg" />
-    <Content Include="Images\product\product-3.jpg" />
-    <Content Include="Images\product\product-4.jpg" />
-    <Content Include="Images\product\product-5.jpg" />
-    <Content Include="Images\product\product-6.jpg" />
-    <Content Include="Images\product\product-7.jpg" />
-    <Content Include="Images\product\product-8.jpg" />
-    <Content Include="Images\product\product-9.jpg" />
-    <Content Include="Images\read\blog-1.jpg" />
-    <Content Include="Images\read\blog-2.jpg" />
-    <Content Include="Images\read\blog-3.jpg" />
-    <Content Include="Images\read\blog-4.jpg" />
-    <Content Include="Images\read\blog-5.jpg" />
-    <Content Include="Images\read\blog-6.jpg" />
-    <Content Include="Images\read\comment\m.jpg" />
-    <Content Include="Images\read\comment\wm.jpg" />
-    <Content Include="Images\read\details\details-hero.png" />
-    <Content Include="Images\read\page\10.jpg" />
-    <Content Include="Images\read\page\11.jpg" />
-    <Content Include="Images\read\page\12.jpg" />
-    <Content Include="Images\read\page\13.jpg" />
-    <Content Include="Images\read\page\14.jpg" />
-    <Content Include="Images\read\page\15.jpg" />
-    <Content Include="Images\read\page\16.jpg" />
-    <Content Include="Images\read\page\17.jpg" />
-    <Content Include="Images\read\page\18.jpg" />
-    <Content Include="Images\read\page\19.jpg" />
-    <Content Include="Images\read\page\20.jpg" />
-    <Content Include="Images\read\page\21.jpg" />
-    <Content Include="Images\read\page\22.jpg" />
-    <Content Include="Images\read\page\23.jpg" />
-    <Content Include="Images\read\page\24.jpg" />
-    <Content Include="Images\read\page\25.jpg" />
-    <Content Include="Images\read\page\26.jpg" />
-    <Content Include="Images\read\page\27.jpg" />
-    <Content Include="Images\read\page\28.jpg" />
-    <Content Include="Images\read\page\29.jpg" />
-    <Content Include="Images\read\page\30.jpg" />
-    <Content Include="Images\read\page\31.jpg" />
-    <Content Include="Images\read\page\32.jpg" />
-    <Content Include="Images\read\page\33.jpg" />
-    <Content Include="Images\read\page\34.jpg" />
-    <Content Include="Images\read\page\35.jpg" />
-    <Content Include="Images\read\page\36.jpg" />
-    <Content Include="Images\read\page\37.jpg" />
-    <Content Include="Images\read\page\38.jpg" />
-    <Content Include="Images\read\page\39.jpg" />
-    <Content Include="Images\read\page\40.jpg" />
-    <Content Include="Images\read\page\41.jpg" />
-    <Content Include="Images\read\page\42.jpg" />
-    <Content Include="Images\read\page\43.jpg" />
-    <Content Include="Images\read\page\44.jpg" />
-    <Content Include="Images\read\page\45.jpg" />
-    <Content Include="Images\read\page\46.jpg" />
-    <Content Include="Images\read\page\47.jpg" />
-    <Content Include="Images\read\page\48.jpg" />
-    <Content Include="Images\read\page\49.jpg" />
-    <Content Include="Images\read\page\5.jpg" />
-    <Content Include="Images\read\page\6.jpg" />
-    <Content Include="Images\read\page\7.jpg" />
-    <Content Include="Images\read\page\8.jpg" />
-    <Content Include="Images\read\page\9.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -3311,7 +3216,6 @@
     <Content Include="Areas\Admin\Views\Account\ForgotPasswordConfirmation.cshtml" />
     <Content Include="Areas\Admin\Views\Account\ForgotPassword.cshtml" />
     <Content Include="Areas\Admin\Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Areas\Admin\Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Areas\Admin\Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Areas\Admin\Views\Account\ExternalLoginFailure.cshtml" />
     <Content Include="Areas\Admin\Views\Account\Create.cshtml" />
@@ -3344,11 +3248,11 @@
     <Content Include="Content\sass\_shoping-cart.scss" />
     <Content Include="Content\sass\_sidebar.scss" />
     <Content Include="Content\sass\_variable.scss" />
-    <Content Include="Areas\Admin\Views\Vieweds\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\Vieweds\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\Vieweds\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\Vieweds\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Vieweds\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Viewed\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Viewed\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Viewed\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Viewed\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Viewed\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -3371,8 +3275,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -3394,16 +3296,9 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Stories\Create.cshtml" />
-    <Content Include="Views\Stories\Delete.cshtml" />
     <Content Include="Views\Stories\Details.cshtml" />
-    <Content Include="Views\Stories\Edit.cshtml" />
     <Content Include="Views\Stories\Index.cshtml" />
-    <Content Include="Views\Chapters\Create.cshtml" />
-    <Content Include="Views\Chapters\Delete.cshtml" />
     <Content Include="Views\Chapters\Details.cshtml" />
-    <Content Include="Views\Chapters\Edit.cshtml" />
-    <Content Include="Views\Chapters\Index.cshtml" />
     <Content Include="Views\Home\PrivacyPolicy.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -3444,6 +3339,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202405270457361_updatedatabase.resx">
       <DependentUpon>202405270457361_updatedatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202406022010144_update.resx">
+      <DependentUpon>202406022010144_update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

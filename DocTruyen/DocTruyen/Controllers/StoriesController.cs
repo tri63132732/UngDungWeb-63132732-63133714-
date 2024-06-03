@@ -18,19 +18,30 @@ namespace DocTruyen.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Stories
-        public ActionResult Index(int? page)
+        public ActionResult Index(string searchQuery, int? page)
         {
+            // Retrieve stories from the database and order by name
             IEnumerable<Story> items = db.Stories.OrderBy(x => x.Name);
-            var pageSize = 5;
-            if (page == null)
+
+            // If a search query is provided, filter the stories
+            if (!String.IsNullOrEmpty(searchQuery))
             {
-                page = 1;
+                items = items.Where(s => s.Name.Contains(searchQuery) || s.Content.Contains(searchQuery));
             }
-            var pageIndex = page.HasValue ? Convert.ToInt32(page) : 1;
-            items = items.ToPagedList(pageIndex, pageSize);
+
+            // Set the page size
+            var pageSize = 5;
+            var pageIndex = page ?? 1;
+
+            // Paginate the filtered list of stories
+            var pagedItems = items.ToPagedList(pageIndex, pageSize);
+
+            // Pass the search query and pagination information to the view
             ViewBag.PageSize = pageSize;
             ViewBag.Page = page;
-            return View(items);
+            ViewBag.SearchQuery = searchQuery;
+
+            return View(pagedItems);
         }
 
         // GET: Stories/Details/5

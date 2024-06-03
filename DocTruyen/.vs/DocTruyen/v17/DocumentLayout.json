@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|d:\\ungdungweb-63132732-63133714-\\doctruyen\\doctruyen\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|solutionrelative:doctruyen\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|d:\\ungdungweb-63132732-63133714-\\doctruyen\\doctruyen\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\doctruyen\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|solutionrelative:doctruyen\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|d:\\ungdungweb-63132732-63133714-\\doctruyen\\doctruyen\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|solutionrelative:doctruyen\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|d:\\ungdungweb-63132732-63133714-\\doctruyen\\doctruyen\\controllers\\storiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|solutionrelative:doctruyen\\controllers\\storiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|d:\\ungdungweb-63132732-63133714-\\doctruyen\\doctruyen\\views\\chapters\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|solutionrelative:doctruyen\\views\\chapters\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|d:\\ungdungweb-63132732-63133714-\\doctruyen\\doctruyen\\views\\stories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|solutionrelative:doctruyen\\views\\stories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|d:\\ungdungweb-63132732-63133714-\\doctruyen\\doctruyen\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{65BEC254-B612-47F7-865C-D1DE83622DFA}|DocTruyen\\DocTruyen.csproj|solutionrelative:doctruyen\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "DocTruyen\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "DocTruyen\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAAD0AAAAcAAAA",
+              "DocumentIndex": 2,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Views\\Chapters\\Details.cshtml",
+              "RelativeDocumentMoniker": "DocTruyen\\Views\\Chapters\\Details.cshtml",
+              "ToolTip": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Views\\Chapters\\Details.cshtml",
+              "RelativeToolTip": "DocTruyen\\Views\\Chapters\\Details.cshtml",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAACsAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-02T23:47:44.819Z",
+              "WhenOpened": "2024-06-03T02:24:21.817Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "StoriesController.cs",
+              "DocumentMoniker": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Controllers\\StoriesController.cs",
+              "RelativeDocumentMoniker": "DocTruyen\\Controllers\\StoriesController.cs",
+              "ToolTip": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Controllers\\StoriesController.cs",
+              "RelativeToolTip": "DocTruyen\\Controllers\\StoriesController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAArwDUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T02:15:33.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "DocTruyen\\Views\\Home\\Index.cshtml",
               "ToolTip": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "DocTruyen\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAADIAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-02T23:47:35.388Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "DocTruyen\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "DocTruyen\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T23:24:39.969Z",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Views\\Stories\\Index.cshtml",
+              "RelativeDocumentMoniker": "DocTruyen\\Views\\Stories\\Index.cshtml",
+              "ToolTip": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Views\\Stories\\Index.cshtml",
+              "RelativeToolTip": "DocTruyen\\Views\\Stories\\Index.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAYwBcAAACJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-03T02:01:20.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "DocTruyen\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\UngDungWeb-63132732-63133714-\\DocTruyen\\DocTruyen\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "DocTruyen\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAADYAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-02T23:47:44.819Z",
               "EditorCaption": ""
             }
           ]
